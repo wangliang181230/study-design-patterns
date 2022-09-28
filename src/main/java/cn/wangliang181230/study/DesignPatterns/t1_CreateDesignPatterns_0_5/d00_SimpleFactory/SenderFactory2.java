@@ -1,12 +1,15 @@
 package cn.wangliang181230.study.DesignPatterns.t1_CreateDesignPatterns_0_5.d00_SimpleFactory;
 
-public class SenderFactory2 {
+/**
+ * 多方法简单工厂
+ */
+class SenderFactory2 {
 
-	public Sender produceMail() {
+	public ISender produceMail() {
 		return new MailSender();
 	}
 
-	public Sender produceSms() {
+	public ISender produceSms() {
 		return new SmsSender();
 	}
 }

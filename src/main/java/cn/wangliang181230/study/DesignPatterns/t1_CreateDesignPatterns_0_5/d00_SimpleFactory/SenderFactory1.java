@@ -1,8 +1,11 @@
 package cn.wangliang181230.study.DesignPatterns.t1_CreateDesignPatterns_0_5.d00_SimpleFactory;
 
-public class SenderFactory1 {
+/**
+ * 普通简单工厂
+ */
+class SenderFactory1 {
 
-	public Sender produce(String type) {
+	public ISender produce(String type) {
 		if ("mail".equals(type)) {
 			return new MailSender();
 		} else if ("sms".equals(type)) {
