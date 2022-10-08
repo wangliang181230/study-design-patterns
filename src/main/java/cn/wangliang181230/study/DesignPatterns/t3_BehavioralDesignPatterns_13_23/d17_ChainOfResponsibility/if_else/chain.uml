@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.AbstractBusinessCheckChain</OriginalElement>
+  <nodes>
+    <node x="-16.0" y="-31.0">cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.AbstractBusinessCheckChain</node>
+    <node x="128.0" y="76.0">cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.UserBusinessCheckChain</node>
+    <node x="-133.0" y="178.0">cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.BusinessService</node>
+    <node x="-2.5" y="-138.0">cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.IBusinessCheckChain</node>
+    <node x="-133.0" y="76.0">cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.AgeBusinessCheckChain</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.AbstractBusinessCheckChain" target="cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.IBusinessCheckChain" relationship="REALIZATION">
+      <point x="0.0" y="-28.5" />
+      <point x="0.0" y="28.5" />
+    </edge>
+    <edge source="cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.AgeBusinessCheckChain" target="cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.AbstractBusinessCheckChain" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.5" />
+      <point x="-12.5" y="51.0" />
+      <point x="118.0" y="51.0" />
+      <point x="0.0" y="28.5" />
+    </edge>
+    <edge source="cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.UserBusinessCheckChain" target="cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.AbstractBusinessCheckChain" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.5" />
+      <point x="248.5" y="51.0" />
+      <point x="118.0" y="51.0" />
+      <point x="0.0" y="28.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.5" showDependencies="false" x="128.0" y="58.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
