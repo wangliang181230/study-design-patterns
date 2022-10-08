@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 class SendSmsOrderFinishedListener2 {
 
 	@EventListener(OrderFinishedEvent2.class)
-	public void onApplicationEvent(OrderFinishedEvent2 event) {
-		System.out.println("2.2 接收到消息，orderId = " + event.getOrderId() + "，发送一条短信");
+	public void sendSms(OrderFinishedEvent2 event) {
+		System.out.println("2.2 接收到消息，orderId = " + event.getOrderId() + "，发送一条短信，线程ID：" + Thread.currentThread().getId());
 	}
 
 }

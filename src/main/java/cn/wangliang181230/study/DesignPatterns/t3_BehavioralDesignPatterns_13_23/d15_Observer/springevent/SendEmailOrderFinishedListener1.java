@@ -11,6 +11,6 @@ class SendEmailOrderFinishedListener1 implements ApplicationListener<OrderFinish
 
 	@Override
 	public void onApplicationEvent(OrderFinishedEvent1 event) {
-		System.out.println("1.1 接收到消息，orderId = " + event.getOrderId() + "，发送一条邮件");
+		System.out.println("1.1 接收到消息，orderId = " + event.getOrderId() + "，发送一条邮件，线程ID：" + Thread.currentThread().getId());
 	}
 }

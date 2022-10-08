@@ -17,7 +17,7 @@ public class D15_ObserverTest_SpringEvent {
 
 
 	@Test
-	public void test2() {
+	public void test2() throws InterruptedException {
 		orderService.finishOrder2("222222");
 	}
 

@@ -15,7 +15,7 @@ class OrderService {
 	//region 方式1
 
 	public void finishOrder1(String orderId) {
-		System.out.println("执行业务，状态变更为已完成\r\n");
+		System.out.println("执行业务，状态变更为已完成，线程ID：" + Thread.currentThread().getId() + "\r\n");
 
 		// 触发订单完成事件
 		this.onFinishedEvent1(orderId);
@@ -34,11 +34,14 @@ class OrderService {
 
 	//region 方式2
 
-	public void finishOrder2(String orderId) {
-		System.out.println("执行业务，状态变更为已完成\r\n");
+	public void finishOrder2(String orderId) throws InterruptedException {
+		System.out.println("执行业务，状态变更为已完成，线程ID：" + Thread.currentThread().getId() + "\r\n");
 
 		// 触发订单完成事件
 		this.onFinishedEvent2(orderId);
+
+		System.out.println("sleep 100ms，等待异常任务执行完成");
+		Thread.sleep(100);
 
 		System.out.println("\r\n订阅事件全部执行完成");
 	}

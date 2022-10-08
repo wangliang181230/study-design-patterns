@@ -11,6 +11,6 @@ class SendSmsOrderFinishedListener1 implements ApplicationListener<OrderFinished
 
 	@Override
 	public void onApplicationEvent(OrderFinishedEvent1 event) {
-		System.out.println("1.2 接收到消息，orderId = " + event.getOrderId() + "，发送一条短信");
+		System.out.println("1.2 接收到消息，orderId = " + event.getOrderId() + "，发送一条短信，线程ID：" + Thread.currentThread().getId());
 	}
 }
