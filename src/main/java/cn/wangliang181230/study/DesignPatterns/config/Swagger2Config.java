@@ -1,4 +1,4 @@
-package cn.wangliang181230.study.DesignPatterns;
+package cn.wangliang181230.study.DesignPatterns.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
