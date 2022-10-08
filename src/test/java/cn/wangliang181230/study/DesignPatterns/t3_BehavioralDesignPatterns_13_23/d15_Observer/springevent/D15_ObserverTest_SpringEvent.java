@@ -5,7 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-public class D15_ObserverTest_SpringEvent {
+class D15_ObserverTest_SpringEvent {
 
 	@Autowired
 	private OrderService orderService;
