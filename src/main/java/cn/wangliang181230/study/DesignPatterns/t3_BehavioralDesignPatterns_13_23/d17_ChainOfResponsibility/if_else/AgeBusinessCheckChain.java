@@ -9,6 +9,10 @@ class AgeBusinessCheckChain extends AbstractBusinessCheckChain {
 
 	@Override
 	public void doCheck(BusinessContext context) {
+		if (context.getAge() == null) {
+			System.out.println("✖ 年龄不能为空，不能继续业务");
+			throw new IllegalArgumentException("✖ 年龄不能为空，不能继续业务");
+		}
 		if (context.getAge() < 18) {
 			System.out.println("✖ 年龄未满18周岁，不能继续业务");
 			throw new IllegalArgumentException("✖ 年龄未满18周岁，不能继续业务");

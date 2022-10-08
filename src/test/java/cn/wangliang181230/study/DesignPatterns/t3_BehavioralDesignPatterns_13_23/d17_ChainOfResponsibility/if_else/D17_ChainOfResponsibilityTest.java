@@ -22,12 +22,15 @@ class D17_ChainOfResponsibilityTest {
 	@Test
 	public void test2() {
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			businessService.doBusiness("22222", "userId_222", null);
+		});
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
 			businessService.doBusiness("22222", "userId_222", 17);
 		});
 	}
 
 	@Test
 	public void test3() {
-		businessService.doBusiness("33333", "userId_333", 20);
+		businessService.doBusiness("33333", "userId_333", 18);
 	}
 }
