@@ -12,11 +12,11 @@ class UserBusinessCheckChain extends AbstractBusinessCheckChain {
 	@Override
 	public void doCheck(BusinessContext context) {
 		if (StringUtils.isEmpty(context.getUserId())) {
-			System.out.println("用户ID不能为空，不能继续业务");
-			throw new IllegalArgumentException("用户ID不能为空，不能继续业务");
+			System.out.println("✖ 用户ID不能为空，不能继续业务");
+			throw new IllegalArgumentException("✖ 用户ID不能为空，不能继续业务");
 		}
 
-		System.out.println("用户ID不为空，继续业务");
+		System.out.println("✔ 用户ID不为空，继续业务");
 		super.doNext(context);
 	}
 }
