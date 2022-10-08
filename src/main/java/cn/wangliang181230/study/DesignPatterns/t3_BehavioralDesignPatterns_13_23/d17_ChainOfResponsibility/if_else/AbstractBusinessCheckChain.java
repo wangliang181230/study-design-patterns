@@ -9,7 +9,7 @@ abstract class AbstractBusinessCheckChain implements IBusinessCheckChain {
 		this.next = next;
 	}
 
-	public void doNext(BusinessContext context) {
+	protected void doNext(BusinessContext context) {
 		if (next != null) {
 			next.doCheck(context);
 		}
