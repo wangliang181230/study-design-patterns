@@ -4,4 +4,6 @@ interface IBusinessCheckChain {
 
 	void doCheck(BusinessContext context);
 
+	void setNext(IBusinessCheckChain next);
+
 }

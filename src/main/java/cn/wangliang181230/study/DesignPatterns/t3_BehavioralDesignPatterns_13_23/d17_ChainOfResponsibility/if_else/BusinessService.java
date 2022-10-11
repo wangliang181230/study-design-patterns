@@ -7,12 +7,12 @@ import org.springframework.stereotype.Service;
 @Service
 class BusinessService {
 
-	private final IBusinessCheckChain chain;
+	private final BusinessCheckChainHolder chainHolder;
 
 
 	public void doBusiness(String businessId, String userId, Integer age) {
 		System.out.printf("开始前置条件校验：%s, %s, %d%n\r\n", businessId, userId, age);
-		chain.doCheck(new BusinessContext(businessId, userId, age));
+		chainHolder.get().doCheck(new BusinessContext(businessId, userId, age));
 
 		System.out.println("\r\n前置条件校验通过，继续执行业务");
 	}

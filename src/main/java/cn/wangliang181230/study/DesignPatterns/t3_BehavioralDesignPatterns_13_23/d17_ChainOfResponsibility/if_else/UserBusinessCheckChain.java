@@ -1,13 +1,12 @@
 package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else;
 
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
+@Order(1)
+@Component
 class UserBusinessCheckChain extends AbstractBusinessCheckChain {
-
-	public UserBusinessCheckChain(IBusinessCheckChain next) {
-		super(next);
-	}
-
 
 	@Override
 	public void doCheck(BusinessContext context) {
