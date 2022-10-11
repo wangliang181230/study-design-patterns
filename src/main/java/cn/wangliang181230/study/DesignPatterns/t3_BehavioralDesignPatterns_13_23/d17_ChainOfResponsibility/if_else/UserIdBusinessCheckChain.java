@@ -6,7 +6,7 @@ import org.springframework.util.StringUtils;
 
 @Order(1)
 @Component
-class UserBusinessCheckChain extends AbstractBusinessCheckChain {
+class UserIdBusinessCheckChain extends AbstractBusinessCheckChain {
 
 	@Override
 	public void doCheck(BusinessContext context) {

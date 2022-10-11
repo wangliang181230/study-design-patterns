@@ -10,9 +10,9 @@ class BusinessService {
 	private final BusinessCheckChainHolder chainHolder;
 
 
-	public void doBusiness(String businessId, String userId, Integer age) {
-		System.out.printf("开始前置条件校验：%s, %s, %d%n\r\n", businessId, userId, age);
-		chainHolder.get().doCheck(new BusinessContext(businessId, userId, age));
+	public void doBusiness(String businessId, String userId, Integer userAge, String userType) {
+		System.out.printf("开始前置条件校验：%s, %s, %d, %s%n\r\n", businessId, userId, userAge, userType);
+		chainHolder.get().doCheck(new BusinessContext(businessId, userId, userAge, userType));
 
 		System.out.println("\r\n前置条件校验通过，继续执行业务");
 	}

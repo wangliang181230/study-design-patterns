@@ -13,24 +13,67 @@ class D17_ChainOfResponsibilityTest {
 
 
 	@Test
-	public void test1() {
+	public void test10() {
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			businessService.doBusiness("11111", null, 18);
+			try {
+				businessService.doBusiness("11111", null, 18, "老年人");
+			} catch (IllegalArgumentException e) {
+				Assertions.assertTrue(e.getMessage().contains("用户ID不能为空"));
+				throw e;
+			}
 		});
 	}
 
 	@Test
-	public void test2() {
+	public void test21() {
 		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			businessService.doBusiness("22222", "userId_222", null);
-		});
-		Assertions.assertThrows(IllegalArgumentException.class, () -> {
-			businessService.doBusiness("22222", "userId_222", 17);
+			try {
+				businessService.doBusiness("22222", "userId_222", null, "老年人");
+			} catch (IllegalArgumentException e) {
+				Assertions.assertTrue(e.getMessage().contains("用户年龄不能为空"));
+				throw e;
+			}
 		});
 	}
 
 	@Test
-	public void test3() {
-		businessService.doBusiness("33333", "userId_333", 18);
+	public void test22() {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			try {
+				businessService.doBusiness("22222", "userId_222", 17, "老年人");
+			} catch (IllegalArgumentException e) {
+				Assertions.assertTrue(e.getMessage().contains("用户年龄未满18周岁"));
+				throw e;
+			}
+		});
+	}
+
+	@Test
+	public void test31() {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			try {
+				businessService.doBusiness("33333", "userId_333", 18, null);
+			} catch (IllegalArgumentException e) {
+				Assertions.assertTrue(e.getMessage().contains("用户类型不能为空"));
+				throw e;
+			}
+		});
+	}
+
+	@Test
+	public void test32() {
+		Assertions.assertThrows(IllegalArgumentException.class, () -> {
+			try {
+				businessService.doBusiness("33333", "userId_333", 18, "病人");
+			} catch (IllegalArgumentException e) {
+				Assertions.assertTrue(e.getMessage().contains("用户类型不是“老年人”"));
+				throw e;
+			}
+		});
+	}
+
+	@Test
+	public void testSuccess() {
+		businessService.doBusiness("44444", "userId_444", 18, "老年人");
 	}
 }

@@ -11,7 +11,10 @@ class BusinessContext {
 
 	private String businessId;
 
+
 	private String userId;
 
-	private Integer age;
+	private Integer userAge;
+
+	private String userType;
 }
