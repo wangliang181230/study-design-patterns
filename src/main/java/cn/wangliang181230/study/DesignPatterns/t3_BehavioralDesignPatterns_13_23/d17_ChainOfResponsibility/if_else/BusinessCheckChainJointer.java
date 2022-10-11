@@ -3,9 +3,7 @@ package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_2
 import java.util.List;
 
 import cn.wangliang181230.study.DesignPatterns.common.OrderUtils;
-import org.springframework.stereotype.Component;
 
-@Component
 class BusinessCheckChainJointer {
 
 	public static IBusinessCheckChain join(List<IBusinessCheckChain> chains) {
