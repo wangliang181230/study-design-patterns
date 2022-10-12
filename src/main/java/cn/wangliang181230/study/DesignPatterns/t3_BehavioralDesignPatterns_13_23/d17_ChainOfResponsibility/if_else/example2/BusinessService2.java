@@ -1,4 +1,4 @@
-package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.example1;
+package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.example2;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 
 @RequiredArgsConstructor(onConstructor_ = @Autowired)
 @Service
-class BusinessService {
+class BusinessService2 {
 
-	private final BusinessCheckChainHolder chainHolder;
+	private final BusinessCheckerChainHolder chainHolder;
 
 
 	public void doBusiness(String businessId, String userId, Integer userAge, String userType) {

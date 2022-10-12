@@ -1,11 +1,11 @@
-package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.example1;
+package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.example2;
 
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Order(2)
 @Component
-class UserAgeBusinessCheckChain extends AbstractBusinessCheckChain {
+class UserAgeBusinessCheckerChain2 extends AbstractBusinessCheckerChain {
 
 	@Override
 	public void doCheck(BusinessContext context) {

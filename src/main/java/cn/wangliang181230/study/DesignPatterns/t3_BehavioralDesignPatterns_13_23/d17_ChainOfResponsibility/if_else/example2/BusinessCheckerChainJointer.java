@@ -1,12 +1,12 @@
-package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.example1;
+package cn.wangliang181230.study.DesignPatterns.t3_BehavioralDesignPatterns_13_23.d17_ChainOfResponsibility.if_else.example2;
 
 import java.util.List;
 
 import cn.wangliang181230.study.DesignPatterns.common.OrderUtils;
 
-class BusinessCheckChainJointer {
+class BusinessCheckerChainJointer {
 
-	public static IBusinessCheckChain join(List<IBusinessCheckChain> chains) {
+	public static IBusinessCheckerChain join(List<IBusinessCheckerChain> chains) {
 		// 先排序
 		OrderUtils.sortByOrder(chains);
 

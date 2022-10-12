@@ -9,7 +9,7 @@ import org.springframework.util.StringUtils;
  */
 //@Order(3)
 @Component
-class UserTypeBusinessCheckChain extends AbstractBusinessCheckChain implements Ordered {
+class UserTypeBusinessChecker1 implements IBusinessChecker, Ordered {
 
 	@Override
 	public int getOrder() {
@@ -17,7 +17,7 @@ class UserTypeBusinessCheckChain extends AbstractBusinessCheckChain implements O
 	}
 
 	@Override
-	public void doCheck(BusinessContext context) {
+	public void doCheck(BusinessContext context, IBusinessCheckerChain chain) {
 		if (StringUtils.isEmpty(context.getUserType())) {
 			System.out.println("✖ 用户类型不能为空，不能继续业务");
 			throw new IllegalArgumentException("✖ 用户类型不能为空，不能继续业务");
@@ -28,6 +28,6 @@ class UserTypeBusinessCheckChain extends AbstractBusinessCheckChain implements O
 		}
 
 		System.out.println("✔ 用户类型是“老年人”，继续业务");
-		super.doNext(context);
+		chain.doCheck(context);
 	}
 }
